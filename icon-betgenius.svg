@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#001a00"/>
+      <stop offset="100%" style="stop-color:#003300"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22C55E"/>
+      <stop offset="100%" style="stop-color:#15803D"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C9A84C"/>
+      <stop offset="100%" style="stop-color:#8B6914"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(0,0,0,0.5)"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="100" fill="url(#bg)"/>
+
+  <!-- Glow effect -->
+  <circle cx="256" cy="256" r="180" fill="rgba(34,197,94,0.08)"/>
+
+  <!-- Football -->
+  <circle cx="256" cy="220" r="120" fill="url(#green)" filter="url(#shadow)"/>
+  <circle cx="256" cy="220" r="120" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+
+  <!-- Football pattern -->
+  <polygon points="256,140 226,180 286,180" fill="rgba(0,0,0,0.3)" stroke="rgba(0,0,0,0.5)" stroke-width="2"/>
+  <polygon points="186,190 206,230 226,180" fill="rgba(0,0,0,0.3)" stroke="rgba(0,0,0,0.5)" stroke-width="2"/>
+  <polygon points="326,190 306,230 286,180" fill="rgba(0,0,0,0.3)" stroke="rgba(0,0,0,0.5)" stroke-width="2"/>
+  <polygon points="206,250 236,270 226,230" fill="rgba(0,0,0,0.3)" stroke="rgba(0,0,0,0.5)" stroke-width="2"/>
+  <polygon points="306,250 276,270 286,230" fill="rgba(0,0,0,0.3)" stroke="rgba(0,0,0,0.5)" stroke-width="2"/>
+
+  <!-- Shine on ball -->
+  <ellipse cx="220" cy="175" rx="35" ry="22" fill="rgba(255,255,255,0.15)" transform="rotate(-30,220,175)"/>
+
+  <!-- AI Badge -->
+  <rect x="156" y="360" width="200" height="70" rx="35" fill="url(#gold)" filter="url(#shadow)"/>
+  <rect x="156" y="360" width="200" height="70" rx="35" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+
+  <!-- AI Text -->
+  <text x="256" y="406" font-family="Arial Black, sans-serif" font-size="36" font-weight="900" fill="#000" text-anchor="middle" letter-spacing="4">AI</text>
+
+  <!-- BetGenius text -->
+  <text x="256" y="480" font-family="Arial Black, sans-serif" font-size="22" font-weight="900" fill="#22C55E" text-anchor="middle" letter-spacing="2" filter="url(#glow)">BETGENIUS</text>
+</svg>
